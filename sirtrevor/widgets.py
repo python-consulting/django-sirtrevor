@@ -31,6 +31,8 @@ class SirTrevorWidget(forms.Textarea):
 
         sirtrevor_defaults = {
             'uploadUrl': kwargs.pop('st_upload_url', force_text(settings.SIRTREVOR_UPLOAD_URL)),
+            'baseImageUrl': kwargs.pop('st_baseimage_url', force_text(settings.SIRTREVOR_BASEIMAGE_URL)),
+
         }
         attrs['data-sirtrevor-defaults'] = json.dumps(sirtrevor_defaults)
 
